@@ -16,6 +16,9 @@ add_action('wp_enqueue_scripts', function() {
     wp_dequeue_style('global-styles');
 }, 20);
 
+// Activer l'utilisation d'images de couverture sur les post_tpes customs
+add_theme_support('post-thumbnails', ['recipe']);
+
 // Enregistrer de nouveaux types de contenus qui seront stockés dans la table "wp_posts", avec un identifiant de type spécifique dans la colonne post_type
 
 register_post_type('recipe', [
@@ -27,5 +30,5 @@ register_post_type('recipe', [
     'rewrite' => [
         'slug' => 'recettes',
     ],
-    'supports' => ['title', 'editor', 'excerpt']
+    'supports' => ['title', 'editor', 'excerpt', 'thumbnail']
 ]);

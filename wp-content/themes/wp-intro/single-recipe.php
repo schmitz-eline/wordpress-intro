@@ -8,8 +8,26 @@
         }
         .recipe_ingredients {
             width: 320px;
-            background-color: #CCC;
-            padding-left: 30px;
+            background-color: #F1F1F1;
+            padding: 20px;
+            display: flex;
+            flex-direction: column-reverse;
+        }
+        .recipe_fig {
+            display: block;
+            position: relative;
+            width: 100%;
+            height: 0;
+            padding-top: 100%;
+            margin: 0;
+        }
+        .recipe_img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
         }
     </style>
 
@@ -23,8 +41,13 @@ if (have_posts()) : while (have_posts()) : the_post(); ?>
 
     <div class="recipe">
         <aside class="recipe_ingredients">
-            <h3>Ingrédients</h3>
-            <p>À compléter...</p>
+            <div>
+                <h3>Ingrédients</h3>
+                <p>À compléter...</p>
+            </div>
+            <figure class="recipe_fig">
+                <?= get_the_post_thumbnail(size: 'medium', attr: ['class' => 'recipe_img']); ?>
+            </figure>
         </aside>
         <section class="recipe_steps">
             <h3>Étapes</h3>
