@@ -1,8 +1,8 @@
-<?php /* Template Name: Template "À propos" */ ?>
+<?php /* Template Name: Template "Contact" */ ?>
 
 <?php get_header() ?>
 
-<h2>À propos de moi</h2>
+<h2>Me contacter</h2>
 
 <?php
 // On ouvre la boucle (The Loop), la structure de contrôle de contenu propre à wordpress
